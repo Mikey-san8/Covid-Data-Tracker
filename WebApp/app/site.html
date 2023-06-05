@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines Covid Data and Awareness</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+    <div class="banner">
+        <nav class="nav">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/SARS-CoV-2_without_background.png" class="log">
+            </a>
+            <a href="https://www.who.int/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/UN_emblem_blue.svg/768px-UN_emblem_blue.svg.png?20220704023106" class="whoo">
+            </a>
+            <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#covid">Covid 19</a></li>
+            <li><a href="#data_1">Data</a></li>
+            <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+        <section id="home">
+            <img src="https://cdn-icons-png.flaticon.com/512/2713/2713724.png" alt="image" id="image">
+        <h1>Covid-19 Incidence Rate </h1>
+            <p id="ITP">in the Philippines <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg"></p>
+        </section>
+        <section id="covid">
+<div class="warpper">
+  <input class="radio" id="one" name="group" type="radio" checked>
+  <input class="radio" id="two" name="group" type="radio">
+  <input class="radio" id="three" name="group" type="radio">
+  <div class="tabs">
+  <label class="tab" id="one-tab" for="one">Overview</label>
+  <label class="tab" id="two-tab" for="two">Symptoms</label>
+  <label class="tab" id="three-tab" for="three">Prevention</label>
+    </div>
+  <div class="panels">
+  <div class="panel" id="one-panel">
+    <div class="panel_content"><p id="cov19">The Coronavirus disease or Covid-19 is an infectious disease that cause by the SARS-CoV-2 virus and was discovered in December 2019 in Wuhan, China. The coronavirus it is very contagious and has quickly spread around the world, most often causes respiratory symptoms that can feel much like a cold, flu, or pneumonia. It can attack more than your lungs and respiratory system. Most people with covid-19 have mild symptoms, but some people become severely ill. 
+        </p><br><p id="tw">The word "Corona" means crown and refers to the appearance that coronaviruses get from the spike proteins sticking out of them. These spikes proteins are important to the biology of this virus. The spike protein is the part of the virus that attaches to a human cell to infect it, allowing it to replicate inside of the cell and spread to other cells. </p></div>
+  </div>
+  <div class="panel" id="two-panel">
+      <div class="panel_content2">
+<p>COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover without hospitalization.</p></div>
+<div class="panel_content2_1">
+<p>Most common symptoms:
+<br>
+    <li>Fever</li>
+    <li>Cough</li>
+    <li>Tiredness</li>
+    <li>Loss of Taste or Smell</li>
+<br>
+Less common symptoms:
+<br>
+    <li>Sore throat</li>
+    <li>Headache</li>
+    <li>Aches and Pains</li>
+    <li>Diarrhea</li>
+    <li>A rash on skin, or Discolouration of fingers or toes</li>
+    <li>Red or irritated yes</li>
+<br>
+Serious symptoms:
+<br>
+Difficulty breathing or shortness of breath
+loss of speech or mobility, or confusion
+chest pain.
+Seek immediate medical attention if you have serious symptoms.  Always call before visiting your doctor or health facility. 
+<br><br>
+People with mild symptoms who are otherwise healthy should manage their symptoms at home. 
+<br><br>
+On average it takes 5–6 days from when someone is infected with the virus for symptoms to show, however it can take up to 14 days.</p>
+    </div>
+      <div class="court"><br>Courtesy of World Health Organization (WHO)</div></div>
+ 
+  <div class="panel" id="three-panel"> 
+      <h1>What to do if you have coronavirus?</h1>
+      <div class="panel_content">
+          <p id="solution">If you don’t feel well, stay home. Even if you have mild symptoms like a headache and runny nose, stay until you’re better. This Doctors focus on people who are more seriously ill and protects health care workers and people you might meet along the way. <br><br>Call the Doctor if you have trouble breathing, you need to get medical help as soon as possible. Calling ahead will let the doctor direct you to the proper place, which may not be your doctor’s office.</p>
+        <div class="panel3_follow">
+            <br>Follow your doctor’s advice and keep up with the news on covid-19 between your doctor and health care authorities, you’ll get the care you need and information on how to prevent the virus from spreading.
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+        </section>
+        <section id="data_1">
+            
+<div class="container">
+    <h1>Covid-19 Cases In <span id="country"> </span> <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg"></h1>
+    <div class="content">
+        <div class="box" id="box1">
+            <div class="subtitle active" >Active Cases</div>
+            <div class="data" id="Active_Cases"></div>
+        </div>
+        <div class="box" id="box1">
+            <div class="subtitle total">Total Cases(2022)</div>
+            <div class="data" id="Total_Cases"></div>
+        </div>
+        <div class="box" id="box1">
+            <div class="subtitle critical">Critical Cases</div>
+            <div class="data" id="Critical_Cases"></div>
+        </div>
+        <div class="box" id="box2">
+            <div class="subtitle death">Total Deaths</div>
+            <div class="data" id="Total_Death"></div>
+        </div>
+        <div class="box" id="box2">
+            <div class="subtitle recovered">Recovered Cases</div>
+            <div class="data" id="Recovered_Cases"></div>
+        </div>
+        <div class="box" id="box2">
+            <div class="subtitle test">Covid Tests</div>
+            <div class="data" id="Covid_Tests"></div>
+        </div>
+    </div>
+     <div class="doh_1"><a href="https://doh.gov.ph/covid19tracker" target="_blank"><img src ="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Department_of_Health_%28DOH%29_PHL.svg/900px-Department_of_Health_%28DOH%29_PHL.svg.png?20211126141726" id="doh"><h1>Department of health</h1></a></div>
+     <p id = "lastUP"></p>
+    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    <p id="date"></p>
+    
+    <script>
+        
+n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("date").innerHTML = "Date: " + m + " / " + d + " / " + y;
+    
+    </script>
+   
+    
+</div>
+    
+<script type="text/javascript">
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '9bbe6884d5msh737dc3cf474112ap10e713jsna91712890c69',
+		'X-RapidAPI-Host': 'covid-193.p.rapidapi.com'
+	}
+};
+
+fetch('https://covid-193.p.rapidapi.com/statistics?country=Philippines', options)
+	.then(response => response.json())
+	.then((data) => 
+    {
+    console.log(data)
+    document.getElementById("Active_Cases").innerHTML = data.response['0'].cases?.active;
+    document.getElementById("Total_Cases").innerHTML = data.response['0'].cases?.total;
+    document.getElementById("Recovered_Cases").innerHTML = data.response['0'].cases?.recovered;
+    document.getElementById("Total_Death").innerHTML = data.response['0'].deaths?.total;
+    document.getElementById("Critical_Cases").innerHTML = data.response['0'].cases?.critical;
+    document.getElementById("Covid_Tests").innerHTML = data.response['0'].tests?.total;
+    document.getElementById("lastUP").innerHTML = "Last Update: " + data.response['0'].time;
+    })
+	.catch(err => console.error(err));
+
+</script>
+            
+        </section>
+        <section id="about">
+            <div class="ABT">
+                <h1>About</h1>
+            <ul>
+            <li><a href="https://doh.gov.ph/vaccines" target="_blank">Updates on Covid-19 Vaccines</a></li><br>
+            <li><a href="https://www.lguvscovid.ph/lgu-vaccination-websites/home" target="_blank">LGU Vaccination Websites</a></li><br>
+            <li><a href="https://www.who.int/health-topics/coronavirus#tab=tab_1" target="_blank">Corona Virus Disease (Topic)</a></li><br>
+            <li><a href="https://doh.gov.ph/doh-local-directory" target="_blank">Philippine Covid-19 Hotline<h2>Call or Text</h2><h3>02-894-COVID (02-894-26843)</h3><h4>1555</h4></a></li>  
+            </ul>
+            
+            </div>
+        </section>
+        
+        <script>
+    function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+    
+
+showTime();
+    </script>
+        
+    </div>
+
+    </body>
+    
+</body>
+</html>
+<!-- EOD -->

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Statistics Viewer</title>
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+<div class = "banner">
+<h1>Covid-19 Statistics Checker</h1>
+<input type="text" id="myInput" class="getCountry" placeholder="Country Name">
+<button id="button" class="submit">Submit</button>
+</div>
+               
+<div class="container">
+    <h1>Covid-19 Cases In <span id="country">*Type Country</span></h1>
+    <div class="content">
+        <div class="box" id="box1">
+            <div class="subtitle active" >Active Cases</div>
+            <div class="data" id="Active_Cases"></div>
+        </div>
+        <div class="box" id="box1">
+            <div class="subtitle total">Total Cases(2022)</div>
+            <div class="data" id="Total_Cases"></div>
+        </div>
+        <div class="box" id="box1">
+            <div class="subtitle critical">Critical Cases</div>
+            <div class="data" id="Critical_Cases"></div>
+        </div>
+        <div class="box" id="box2">
+            <div class="subtitle death">Total Deaths</div>
+            <div class="data" id="Total_Death"></div>
+        </div>
+        <div class="box" id="box2">
+            <div class="subtitle recovered">Recovered Cases</div>
+            <div class="data" id="Recovered_Cases"></div>
+        </div>
+        <div class="box" id="box2">
+            <div class="subtitle test">Covid Tests</div>
+            <div class="data" id="Covid_Tests"></div>
+        </div>
+    </div>
+     <div class="doh_1"><a href="https://doh.gov.ph/covid19tracker" target="_blank"><img src ="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Department_of_Health_%28DOH%29_PHL.svg/900px-Department_of_Health_%28DOH%29_PHL.svg.png?20211126141726" id="doh"><h1>Department of health</h1></a></div>
+     <p id = "lastUP"></p>
+    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    <p id="date"></p>
+    
+    <script>
+        
+n =  new Date();
+y = n.getFullYear();
+m = n.getMonth() + 1;
+d = n.getDate();
+document.getElementById("date").innerHTML = "Date: " + m + " / " + d + " / " + y;
+    
+    </script>
+   
+    
+</div>
+
+
+<script type="text/javascript">
+
+const btn = document.querySelector(".submit");
+const input = document.querySelector(".getCountry");
+
+input.addEventListener("keypress", function(event) 
+{
+  if (event.key === "Enter") 
+  {
+    event.preventDefault();
+    document.querySelector(".submit").click();
+  }
+});
+
+btn.addEventListener("click", data);
+
+function data()
+{
+    let country = input.value;
+
+    const options = 
+{
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '9bbe6884d5msh737dc3cf474112ap10e713jsna91712890c69',
+		'X-RapidAPI-Host': 'covid-193.p.rapidapi.com'
+	}
+};
+
+    fetch(`https://covid-193.p.rapidapi.com/statistics?country=${country}`, options)
+	.then(response => response.json())
+	.then((data) => 
+    {
+    console.log(data)
+    document.getElementById("Active_Cases").innerHTML = data.response['0'].cases?.active;
+    document.getElementById("Total_Cases").innerHTML = data.response['0'].cases?.total;
+    document.getElementById("Recovered_Cases").innerHTML = data.response['0'].cases?.recovered;
+    document.getElementById("Total_Death").innerHTML = data.response['0'].deaths?.total;
+    document.getElementById("Critical_Cases").innerHTML = data.response['0'].cases?.critical;
+    document.getElementById("Covid_Tests").innerHTML = data.response['0'].tests?.total;
+    document.getElementById("lastUP").innerHTML = "Last Update: " + data.response['0'].time;
+    })
+	.catch(err => console.error(err));
+
+    document.getElementById("country").innerHTML = country;
+}
+
+</script>
+         
+<script>
+    function showTime(){
+    var date = new Date();
+    var h = date.getHours(); // 0 - 23
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+    
+
+showTime();
+    </script>
+</body>
+</html>
