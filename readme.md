@@ -1,4 +1,4 @@
-This is a Covid-19 Statistics Viewer for all Countries<br>
+This is a Covid-19 Data Viewer for all Countries<br>
 For input:<br>
     - Type Country Name <br>
     - Then wait for the results <br>
