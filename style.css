@@ -1,4 +1,11 @@
-*{
+body{
+    overflow: hidden;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(https://images3.alphacoders.com/557/557365.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* *{
     margin: 0;
     padding: 0;
 }
@@ -189,4 +196,4 @@ body{
 #lastUP{
     color: #fff;
     font-family: Orbitron;
-}
+} */
